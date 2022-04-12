@@ -15,6 +15,14 @@
 body {
 	font-family: "Montserrat", sans-serif;
 }
+.prof {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-bottom: 20px;
+}
 .project,
 .work {
 	padding: 0;
@@ -126,7 +134,7 @@ body {
 .prof {
 	font-style: normal;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 18px;
 	line-height: 17px;
     text-shadow: #cacaca 5px 2px ;
 }
