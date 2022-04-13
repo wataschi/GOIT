@@ -1,7 +1,7 @@
 (function($) {
     "use strict";
     const typed = new Typed('.prof', {
-        strings: ["Front-End Developer","Web and Mobile"],
+        strings: ["Front-End Developer"],
         typeSpeed: 40,
         backSpeed: 40,
         backDelay: 2000,
