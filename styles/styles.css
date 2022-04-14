@@ -26,11 +26,6 @@ body {
 	background-color: rgba(255, 176, 92, 0.15);
 	border-radius: 50%;
 	font-style: normal;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 17px;
-	color: #000000;
-	margin-bottom: 20px;
 }
 .project,
 .work {
@@ -142,13 +137,7 @@ body {
 	line-height: 24px;
 	color: #595959;
 }
-.prof {
-	font-style: normal;
 	font-weight: 700;
-	font-size: 18px;
-	line-height: 17px;
-	text-shadow: #cacaca 5px 2px;
-}
 .name {
 	font-family: "Monda", sans-serif;
 	font-style: normal;
@@ -156,7 +145,6 @@ body {
 	font-size: 45px;
 	line-height: 55px;
 	text-shadow: #cacaca 5px 2px 1px;
-	text-shadow: #cacaca 5px 2px;
 	color: #000000;
 }
 .main_content {
@@ -178,7 +166,6 @@ body {
 	line-height: 27px;
 	color: #000000;
 	text-shadow: 5px 2px 2px #bebebe;
-	text-shadow: #cacaca 5px 2px;
 	padding: 0px;
 	margin-bottom: 12px;
 }
