@@ -13,7 +13,7 @@
 	width: 1280px;
 	margin: 0 auto;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1320px) {
 	.main {
 		display: flex;
 		flex-direction: column;
@@ -226,7 +226,7 @@ body {
 	width: 380px;
 	margin-bottom: 50px;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1320px) {
 	.photo {
 		width: 420px;
 		margin-bottom: 50px;
