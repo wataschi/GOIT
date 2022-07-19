@@ -6,10 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Monda:wght@700&family=Montserrat:wght@400;700&display=swap"
 			rel="stylesheet"
@@ -26,8 +22,26 @@
 				<div>
 					<!--About-->
 					<div class="about" id="about">
+						<div id="calcBox">
+						<h1 id="calculator">Custom Calculator</h1>
+							<div id="inputs">
+								<input id="inputOne" type="number">
+								<input id="inputTwo" type="number">
+							</div>
+							<br>
+							<div id="result">
+								<output id="outputRes" type='number'>Input operation</output>
+							</div>
+							<br>
+							<div id="buttonsRes">
+								<button id="buttonS">+</button>
+								<button id="buttonN">-</button>
+								<button id="buttonM">*</button>
+								<button id="buttonD">/</button>
+							</div>
+						</div>
 						<span class="prof"></span>
-						<h1 class="name">Dmytro Vyshnevskyi</h1>
+						<h1 id="name" class="name">Dmytro Vyshnevskyi</h1>
 						<p>
 							My name is Dmitry, I was born and raised in Kyiv.
 							<br />
@@ -204,11 +218,6 @@
 				</div>
 			</aside>
 		</div>
-		<!-- jQuery -->
-		<script src="assets/js/jquery-1.12.4.min.js"></script>
-		<!-- Typed JS -->
-		<script src="assets/js/typed.js"></script>
-		<!-- main js -->
 		<script src="js/main.js"></script>
 	</body>
 </html>

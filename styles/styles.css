@@ -4,7 +4,35 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
-
+#calcBox{
+	border: 2px black dotted;
+}
+#inputTwo, #inputOne, #buttonS, #buttonN, #buttonM, #buttonD{
+	
+	font-family: "Monda", sans-serif;
+	font-weight: 500;
+	line-height: 15px;
+	font-size: 16px;
+	color: #1b1a1a;
+	margin: 5px;
+}
+#result{
+	font-family: "Monda", sans-serif;
+	font-weight: 500;
+	line-height: 15px;
+	font-size: 24px;
+	color: #1b1a1a;
+	margin: 5px;
+}
+#calculator{
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+#inputs, #result, #buttonsRes, #calculator{
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
 /* Main styles */
 .main {
 	display: flex;
