@@ -1,40 +1,39 @@
+const inputValue = e => {
+	inputOneValue = Number(inputOne.value);
+	inputTwoValue = Number(inputTwo.value);
+};
 
-inputOneId = 'inputOne'
-inputTwoId = 'inputTwo'
-buttonResId = 'buttonRes'
-outputResId = 'outputRes'
-inputOne= document.getElementById(inputOneId)
-inputTwo= document.getElementById(inputTwoId)
-buttonRes= document.getElementById(buttonResId)
-outputRes= document.getElementById(outputResId)
-
-const inputValue = (e) =>{
-    inputOneValue = inputOne.value;
-    inputTwoValue =inputTwo.value;
-}
-
-const sFn = (e) =>{
-    inputValue();
-    outputRes.value =(Number(inputOneValue)+Number(inputTwoValue))
-}
-const nFn = (e) =>{
-    inputValue();
-    outputRes.value =(Number(inputOneValue)-Number(inputTwoValue))
-}
-const mFn = (e) =>{
-    inputValue();
-    outputRes.value =(Number(inputOneValue)*Number(inputTwoValue))
-}
-const dFn = (e) =>{
-    inputValue();
-    if ( Number(inputTwoValue)===0 || inputOneValue === undefined ){
-        outputRes.value= 'Bad input!'
-    }
-    else{ outputRes.value =(Number(inputOneValue)/Number(inputTwoValue))}
-}
-
-
-
+const operation = operator => {
+	inputValue();
+	if (operator === "+") {
+		outputRes.value = inputOneValue + inputTwoValue;
+	}
+	if (operator === "-") {
+		outputRes.value = inputOneValue - inputTwoValue;
+	}
+	if (operator === "*") {
+		outputRes.value = inputOneValue * inputTwoValue;
+	}
+	if (operator === "/") {
+		outputRes.value = inputOneValue / inputTwoValue;
+	}
+};
+const sFn = e => {
+	operation("+");
+};
+const nFn = e => {
+	operation("-");
+};
+const mFn = e => {
+	operation("*");
+};
+const dFn = e => {
+	if (inputTwoValue === 0 || inputOneValue === undefined) {
+		outputRes.value = "Bad input!";
+	} else {
+		operation("/");
+	}
+};
 buttonS.addEventListener("click", sFn);
 buttonN.addEventListener("click", nFn);
 buttonM.addEventListener("click", mFn);
