@@ -4,14 +4,27 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
-#calcBox{
+#calcBox {
 	background-color: #afb7bf;
-	margin: auto;
+	margin-left: 5%;
+	margin-right: 5%;
 	margin-top: 150px;
 	border: 1px black solid;
 }
-#inputTwo, #inputOne, #buttonS, #buttonN, #buttonM, #buttonD{
-	
+#inputTwo,
+#inputOne {
+	font-family: "Monda", sans-serif;
+	font-weight: 500;
+	line-height: 15px;
+	font-size: 16px;
+	margin: 10px;
+	width: 100px;
+	color: #1b1a1a;
+}
+#buttonS,
+#buttonN,
+#buttonM,
+#buttonD {
 	font-family: "Monda", sans-serif;
 	font-weight: 500;
 	line-height: 15px;
@@ -19,11 +32,14 @@
 	color: #1b1a1a;
 	margin: 5px;
 }
-#buttonS, #buttonN, #buttonM, #buttonD{
+#buttonS,
+#buttonN,
+#buttonM,
+#buttonD {
 	width: 45px;
 	height: 30px;
 }
-#result{
+#result {
 	font-family: "Monda", sans-serif;
 	font-weight: 500;
 	line-height: 15px;
@@ -31,11 +47,14 @@
 	color: #1b1a1a;
 	margin: 5px;
 }
-#calculator{
+#calculator {
 	padding-top: 25px;
 	padding-bottom: 15px;
 }
-#inputs, #result, #buttonsRes, #calculator{
+#inputs,
+#result,
+#buttonsRes,
+#calculator {
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
