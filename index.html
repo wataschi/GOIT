@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Monda:wght@700&family=Montserrat:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="styles/styles.css" />
-		<link rel="shortcut icon" href="img/icon1.png" />
-		<title>Vishnya</title>
-	</head>
-	<body id="back">
-						<div id="calcBox">
-							<h1 id="calculator">Custom Calculator</h1>
-							<div id="inputs">
-								<input id="inputOne" type="number">
-								<input id="inputTwo" type="number">
-							</div>
-							<br>
-							<div id="result">
-								<output id="outputRes" type='number'>Input operation</output>
-							</div>
-							<br>
-							<div id="buttonsRes">
-								<button id="buttonS">+</button>
-								<button id="buttonN">-</button>
-								<button id="buttonM">*</button>
-								<button id="buttonD">/</button>
-							</div>
-						</div>
-		<script src="js/main.js"></script>
-	</body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="shortcut icon" href="img/icon1.png" />
+    <title>Vishnya</title>
+</head>
+
+<body id="back">
+    <h1 id="calculator">Personal Calculator</h1>
+    <div id="calcBox">
+        <div class="leftbox">
+            <div id="inputIncome">
+                <span id="inputTitle">Income</span>
+
+                <label id="labelLine">&nbsp;&nbsp;Salary<input class="input" placeholder="Salary" id="inputSalary" type="number"></label>
+                <label id="labelLine">&nbsp;&nbsp;Freelance<input class="input" placeholder="Freelance" id="inputFreelance" type="number"></label>
+                <label id="labelLine">&nbsp;&nbsp;Additionally<input class="input" placeholder="Additionally" id="inputAdditionally" type="number"></label>
+            </div>
+            <div id="inputCosts">
+                <span id="inputTitle">Costs</span>
+                <label id="labelLine">&nbsp;&nbsp;Communal payment<input class="input" placeholder="Communal payment" id="inputCommunal" type="number"></label>
+                <label id="labelLine">&nbsp;&nbsp;Transport <input class="input" placeholder="Transport" id="inputTransport" type="number"></label>
+                <label id="labelLine">&nbsp;&nbsp;Credit <input class="input" placeholder="Credit" id="inputCredit" type="number"></label>
+            </div>
+        </div>
+        <div class="midbox">
+            <div id="result">
+                <label>Available per month: &nbsp;<output class="outputboxes" id="outputMonth" type='number'>0</output>&nbsp;UAH</label>
+                <label>Available per day: &nbsp;<output class="outputboxes" id="outputDay" type='number'>0</output>&nbsp;UAH</label>
+                <label>Accumulate per year: &nbsp;<output class="outputboxes" id="outputAccumulate" type='number'>0</output>&nbsp;UAH</label>
+            </div>
+        </div>
+        <div class="rightbox">
+
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
 </html>

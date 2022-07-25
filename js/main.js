@@ -1,40 +1,40 @@
-const inputValue = e => {
-	inputOneValue = Number(inputOne.value);
-	inputTwoValue = Number(inputTwo.value);
-};
+const buttonRes = document.getElementById('buttonRes');
+const outputBoxes = document.getElementsByClassName('outputboxes');
+const classListener = document.querySelectorAll('input');
 
-const operation = operator => {
-	inputValue();
-	if (operator === "+") {
-		outputRes.value = inputOneValue + inputTwoValue;
-	}
-	if (operator === "-") {
-		outputRes.value = inputOneValue - inputTwoValue;
-	}
-	if (operator === "*") {
-		outputRes.value = inputOneValue * inputTwoValue;
-	}
-	if (operator === "/") {
-		outputRes.value = inputOneValue / inputTwoValue;
-	}
-};
-const sFn = e => {
-	operation("+");
-};
-const nFn = e => {
-	operation("-");
-};
-const mFn = e => {
-	operation("*");
-};
-const dFn = e => {
-	if (inputTwoValue === 0 || inputOneValue === undefined) {
-		outputRes.value = "Bad input!";
-	} else {
-		operation("/");
-	}
-};
-buttonS.addEventListener("click", sFn);
-buttonN.addEventListener("click", nFn);
-buttonM.addEventListener("click", mFn);
-buttonD.addEventListener("click", dFn);
+
+
+let outputMonthValue = 0;
+let outputDayValue = 0;
+let outputAccumulate = 0;
+
+const fnOutputMonth = () => {
+    const incomeValue = Number(classListener[0].value) + Number(classListener[1].value) + Number(classListener[2].value);
+    const costs = Number(classListener[3].value) + Number(classListener[4].value) + Number(classListener[5].value);
+    outputMonthValue = incomeValue - costs;
+    outputBoxes[0].value = outputMonthValue;
+    fnOutputDay(outputMonthValue)
+}
+
+function fnOutputDay(OutputMonthValue) {
+    const OutputDayValue = OutputMonthValue / 30
+    outputBoxes[1].value = OutputDayValue;
+    fnOutputAccumulate(OutputMonthValue)
+
+}
+
+function fnOutputAccumulate(OutputDayValue) {
+    const OutputAccumulate = OutputDayValue * 12
+    outputBoxes[2].value = OutputAccumulate;
+}
+
+for (const item of classListener) {
+    item.addEventListener('input', () => {
+        for (let index = 0; index < classListener.length; index++) {
+            if (classListener[index].value == undefined) {
+                classListener[index].value = 0;
+            }
+        }
+        fnOutputMonth()
+    })
+}

@@ -1,69 +1,144 @@
 /* Global background */
+
 #back {
-	background-image: url(/img/123.jpeg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+#calculator {
+    background-color: #afb7bf;
+    width: 1200px;
+    height: 50px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    border: 1px black solid;
+    font-size: 42px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
 #calcBox {
-	background-color: #afb7bf;
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-top: 150px;
-	border: 1px black solid;
+    display: flex;
+    flex-direction: row;
+    background-color: #afb7bf;
+    width: 1200px;
+    height: 300px;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px black solid;
 }
-#inputTwo,
-#inputOne {
-	font-family: "Monda", sans-serif;
-	font-weight: 500;
-	line-height: 15px;
-	font-size: 16px;
-	margin: 10px;
-	width: 100px;
-	color: #1b1a1a;
+
+.leftbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-#buttonS,
-#buttonN,
-#buttonM,
-#buttonD {
-	font-family: "Monda", sans-serif;
-	font-weight: 500;
-	line-height: 15px;
-	font-size: 16px;
-	color: #1b1a1a;
-	margin: 5px;
+
+.outputDay,
+.outputMonth,
+.outputAccumulate {
+    font-size: 22px;
+    font-size: medium;
 }
-#buttonS,
-#buttonN,
-#buttonM,
-#buttonD {
-	width: 45px;
-	height: 30px;
+
+.midbox {
+    justify-content: center;
+    margin: auto;
 }
+
+.rightbox {
+    margin: 20px;
+    justify-content: center;
+    margin: auto;
+}
+
+input {
+    width: 150px;
+    height: 30px;
+    border-radius: 20px 2px 20px 2px;
+}
+
+.operation-button {
+    font-weight: 500;
+    line-height: 15px;
+    font-size: 16px;
+    color: #1b1a1a;
+    margin: 5px;
+    width: 45px;
+    height: 30px;
+}
+
 #result {
-	font-family: "Monda", sans-serif;
-	font-weight: 500;
-	line-height: 15px;
-	font-size: 24px;
-	color: #1b1a1a;
-	margin: 5px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 24px;
+    color: #1b1a1a;
 }
-#calculator {
-	padding-top: 25px;
-	padding-bottom: 15px;
+
+#outputDay,
+#outputAccumulate {
+    margin-top: 40px;
 }
-#inputs,
-#result,
-#buttonsRes,
-#calculator {
-	display: flex;
-	justify-content: center;
-	margin: 0 auto;
+
+#inputCosts {
+    margin-top: 30px;
+    margin-left: 30px;
 }
+
+#inputTitle {
+    font-size: 25px;
+    font-style: normal;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+#inputCosts,
+#inputIncome {
+    font-size: 25px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 50px;
+    height: 60px;
+    width: 600px;
+}
+
+.inputboxes {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: medium;
+}
+
+#inputSalary,
+#inputFreelance,
+#inputAdditionally,
+#inputCommunal,
+#inputTransport,
+#inputCredit {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+
 /* Main styles */
+
 .main {
-	background-color: #e5e5e5;
-	margin: 0 auto;
+    background-color: #e5e5e5;
+    margin: 0 auto;
 }
+
+#labelLine {
+    font-size: 16px;
+    font-style: normal;
+}
+
 body {
-	font-family: "Monda", sans-serif;
+    font-family: 'Shadows Into Light', cursive;
 }
