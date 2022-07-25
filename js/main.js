@@ -1,31 +1,31 @@
 const buttonRes = document.getElementById('buttonRes');
 const outputBoxes = document.getElementsByClassName('outputboxes');
 const classListener = document.querySelectorAll('input');
+const clearButton = document.getElementById('clearButton')
 
 
+let outputMonthValue;
+let outputDayValue;
+let outputAccumulate;
 
-let outputMonthValue = 0;
-let outputDayValue = 0;
-let outputAccumulate = 0;
 
 const fnOutputMonth = () => {
-    const incomeValue = Number(classListener[0].value) + Number(classListener[1].value) + Number(classListener[2].value);
-    const costs = Number(classListener[3].value) + Number(classListener[4].value) + Number(classListener[5].value);
+    let incomeValue = Number(classListener[0].value) + Number(classListener[1].value) + Number(classListener[2].value);
+    let costs = Number(classListener[3].value) + Number(classListener[4].value) + Number(classListener[5].value);
     outputMonthValue = incomeValue - costs;
     outputBoxes[0].value = outputMonthValue;
     fnOutputDay(outputMonthValue)
 }
 
-function fnOutputDay(OutputMonthValue) {
-    const OutputDayValue = OutputMonthValue / 30
-    outputBoxes[1].value = OutputDayValue;
-    fnOutputAccumulate(OutputMonthValue)
-
+function fnOutputDay(outputMonthValue) {
+    outputDayValue = outputMonthValue / 30
+    outputBoxes[1].value = outputDayValue;
+    fnOutputAccumulate(outputMonthValue)
 }
 
-function fnOutputAccumulate(OutputDayValue) {
-    const OutputAccumulate = OutputDayValue * 12
-    outputBoxes[2].value = OutputAccumulate;
+function fnOutputAccumulate(outputDayValue) {
+    outputAccumulate = outputDayValue * 12
+    outputBoxes[2].value = outputAccumulate;
 }
 
 for (const item of classListener) {
@@ -35,6 +35,17 @@ for (const item of classListener) {
                 classListener[index].value = 0;
             }
         }
-        fnOutputMonth()
+        fnOutputMonth();
     })
 }
+const clearFn = () => {
+    for (let a = 0; a < outputBoxes.length; a++) {
+        outputBoxes[a].value = 0
+    }
+    for (let b = 0; b < classListener.length; b++) {
+        classListener[b].value = undefined
+
+    }
+}
+
+clearButton.addEventListener('click', clearFn)

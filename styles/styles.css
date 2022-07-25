@@ -45,12 +45,11 @@
 
 .midbox {
     justify-content: center;
+    text-align: center;
     margin: auto;
 }
 
 .rightbox {
-    margin: 20px;
-    justify-content: center;
     margin: auto;
 }
 
@@ -83,6 +82,14 @@ input {
     margin-top: 40px;
 }
 
+#clearButton {
+    font-size: 22px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 #inputCosts {
     margin-top: 30px;
     margin-left: 30px;
@@ -107,7 +114,7 @@ input {
     text-align: center;
     margin-left: 50px;
     height: 60px;
-    width: 600px;
+    width: 550px;
 }
 
 .inputboxes {
