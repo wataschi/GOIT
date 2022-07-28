@@ -28,7 +28,7 @@
     margin: auto;
     margin-top: 30px;
     border: 1px black solid;
-    margin-bottom: 40px;
+    margin-bottom: 500px;
 }
 
 .leftbox {
@@ -150,7 +150,7 @@ input {
 #testSlider {
     display: flex;
     border: #1b1a1a 2px solid;
-    width: 1100px;
+    width: 460px;
     height: 300px;
     margin: auto;
     justify-content: center;
