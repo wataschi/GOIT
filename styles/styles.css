@@ -28,7 +28,7 @@
     margin: auto;
     margin-top: 30px;
     border: 1px black solid;
-    margin-bottom: 500px;
+    margin-bottom: 100px;
 }
 
 .leftbox {
@@ -84,11 +84,17 @@ input {
 }
 
 #clearButton {
-    font-size: 22px;
-    font-style: italic;
     display: flex;
+    width: 150px;
+    height: 35px;
+    font-size: 24px;
+    transform: rotate(-45deg);
+    font-style: italic;
     justify-content: center;
     text-align: center;
+    justify-items: center;
+    border-radius: 25px 25px 25px 25px;
+    border: #1b1a1a 1px solid;
 }
 
 #inputCosts {
@@ -119,7 +125,7 @@ input {
 }
 
 .inputboxes {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: "Shadows Into Light", cursive;
     font-size: medium;
 }
 
@@ -131,7 +137,8 @@ input {
 #inputCredit {
     display: flex;
     justify-content: center;
-    margin: 5px;
+    margin: 7px;
+    border: #1b1a1a 1px solid;
 }
 
 
@@ -143,7 +150,7 @@ input {
 }
 
 #labelLine {
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
 }
 
@@ -169,5 +176,5 @@ input {
 }
 
 body {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: "Shadows Into Light", cursive;
 }
