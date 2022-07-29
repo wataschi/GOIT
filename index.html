@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Monda:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="shortcut icon" href="img/icon1.png" />
     <title>Personal calculator</title>
@@ -26,25 +26,55 @@
             <div id="inputIncome">
                 <span id="inputTitle">Income</span>
 
-                <label id="labelLine">&nbsp;&nbsp;Salary<input class="input" placeholder="  Salary" id="inputSalary" type="number"></label>
-                <label id="labelLine">&nbsp;&nbsp;Freelance<input class="input" placeholder="  Freelance" id="inputFreelance" type="number"></label>
-                <label id="labelLine">&nbsp;&nbsp;Additionally<input class="input" placeholder="  Additionally" id="inputAdditionally" type="number"></label>
+                <label id="labelLine">
+						&nbsp;&nbsp;Salary
+						<input class="input" placeholder="  Salary" id="inputSalary" type="number" />
+					</label>
+                <label id="labelLine">
+						&nbsp;&nbsp;Freelance
+						<input class="input" placeholder="  Freelance" id="inputFreelance" type="number" />
+					</label>
+                <label id="labelLine">
+						&nbsp;&nbsp;Additionally
+						<input class="input" placeholder="  Additionally" id="inputAdditionally" type="number" />
+					</label>
             </div>
             <div id="inputCosts">
                 <span id="inputTitle">Costs</span>
-                <label id="labelLine">&nbsp;&nbsp;Communal payment<input class="input" placeholder="  Communal payment" id="inputCommunal" type="number"></label>
-                <label id="labelLine">&nbsp;&nbsp;Transport <input class="input" placeholder="  Transport" id="inputTransport" type="number"></label>
-                <label id="labelLine">&nbsp;&nbsp;Credit <input class="input" placeholder="  Credit" id="inputCredit" type="number"></label>
+                <label id="labelLine">
+						&nbsp;&nbsp;Communal payment
+						<input class="input" placeholder="  Communal payment" id="inputCommunal" type="number" />
+					</label>
+                <label id="labelLine">
+						&nbsp;&nbsp;Transport
+						<input class="input" placeholder="  Transport" id="inputTransport" type="number" />
+					</label>
+                <label id="labelLine">
+						&nbsp;&nbsp;Credit
+						<input class="input" placeholder="  Credit" id="inputCredit" type="number" />
+					</label>
             </div>
         </div>
         <div class="midbox">
             <div id="result">
-                <label>Available per month: <br>
-					<output class="outputboxes" id="outputMonth" type='number'>0</output>&nbsp;UAH</label>
-                <label>Available per day: <br>
-					<output class="outputboxes" id="outputDay" type='number'>0</output>&nbsp;UAH</label>
-                <label>Accumulate per year: <br>
-					<output class="outputboxes" id="outputAccumulate" type='number'>0</output>&nbsp;UAH</label>
+                <label>
+						Available per month:
+						<br />
+						<output class="outputboxes" id="outputMonth" type="number">0</output>
+						&nbsp;UAH
+					</label>
+                <label>
+						Available per day:
+						<br />
+						<output class="outputboxes" id="outputDay" type="number">0</output>
+						&nbsp;UAH
+					</label>
+                <label>
+						Accumulate per year:
+						<br />
+						<output class="outputboxes" id="outputAccumulate" type="number">0</output>
+						&nbsp;UAH
+					</label>
             </div>
         </div>
         <div class="rightbox">
@@ -52,13 +82,15 @@
         </div>
     </div>
     <div id="testSlider">
-        <button disabled='true' ; id="slideL"><</button>
-        <img id="currentImg" width="400px" height="300px" src="" alt="images">
+        <button disabled="true" ; id="slideL"><</button>
+        <img id="currentImg" width="400px" height="300px" alt="images" />
         <button id="slideR">></button>
     </div>
-    <script src='https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
+    <script src="js/car.js"></script>
+    <script src="js/customCalculator.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/slide.js"></script>
 </body>
 
 </html>
