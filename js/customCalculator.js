@@ -1,7 +1,7 @@
-function Calculator() {
-    this.outputBoxes = document.getElementsByClassName("outputboxes");
-    this.classListener = document.querySelectorAll("input");
-    this.clearButton = document.getElementById("clearButton");
+function Calculator(inputId, outputId, clearButtonId) {
+    this.classListener = document.querySelectorAll(inputId);
+    this.outputBoxes = document.getElementsByClassName(outputId);
+    this.clearButton = document.getElementById(clearButtonId);
 
     this.outputMonthValue = null;
     this.outputDayValue = null;
@@ -54,7 +54,7 @@ function Calculator() {
 };
 var calculatorFactory = {
     createNewCalculator: function() {
-        const newCalculator = new Calculator();
+        const newCalculator = new Calculator(inputId, outputId, clearButtonId);
         return newCalculator;
     }
 }
