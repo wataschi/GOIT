@@ -1,4 +1,6 @@
-customCalculator.init();
+const calculator1 = calculatorFactory.createNewCalculator();
+calculator1.init();
+
 slider1.start();
 
 function Dog(name) {

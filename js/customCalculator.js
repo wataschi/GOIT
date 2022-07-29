@@ -1,17 +1,15 @@
-const customCalculator = {
-    buttonRes: document.getElementById("buttonRes"),
-    outputBoxes: document.getElementsByClassName("outputboxes"),
-    classListener: document.querySelectorAll("input"),
-    clearButton: document.getElementById("clearButton"),
+function Calculator() {
+    this.outputBoxes = document.getElementsByClassName("outputboxes");
+    this.classListener = document.querySelectorAll("input");
+    this.clearButton = document.getElementById("clearButton");
 
-    outputMonthValue: null,
-    outputDayValue: null,
-    outputAccumulate: null,
+    this.outputMonthValue = null;
+    this.outputDayValue = null;
+    this.outputAccumulate = null;
+    const thet = this;
+    this.init = function() {
 
-    init: function() {
-        let thet = this;
-        let clearFnBind = this.clearFn.bind(customCalculator);
-        this.clearButton.addEventListener("click", clearFnBind);
+        const clearFnBind = thet.clearFn.bind(Calculator);
         for (const item of thet.classListener) {
             item.addEventListener("input", () => {
                 for (let index = 0; index < thet.classListener.length; index++) {
@@ -21,9 +19,10 @@ const customCalculator = {
                 }
                 this.fnOutputMonth();
             });
+            this.clearButton.addEventListener("click", clearFnBind);
         }
-    },
-    fnOutputMonth: function(e) {
+    };
+    this.fnOutputMonth = function(e) {
         let incomeValue =
             Number(this.classListener[0].value) + Number(this.classListener[1].value) + Number(this.classListener[2].value);
         let costs =
@@ -31,22 +30,31 @@ const customCalculator = {
         let outputMonthValue = incomeValue - costs;
         this.outputBoxes[0].value = outputMonthValue;
         this.fnOutpustDay(outputMonthValue);
-    },
-    fnOutpustDay: function(outputMonthValue) {
+    };
+
+    this.fnOutpustDay = function(outputMonthValue) {
         this.outputDayValue = outputMonthValue / 30;
         this.outputBoxes[1].value = this.outputDayValue;
-        this.fnOutputAccumulate.call(this, outputMonthValue);
-    },
-    fnOutputAccumulate: function(outputMonthValue) {
+        this.fnOutputAccumulate(outputMonthValue);
+    };
+
+    this.fnOutputAccumulate = function(outputMonthValue) {
         let outputAccumulate = outputMonthValue * 12;
         this.outputBoxes[2].value = outputAccumulate;
-    },
-    clearFn: function() {
-        for (let a = 0; a < this.outputBoxes.length; a++) {
-            this.outputBoxes[a].value = 0;
+    };
+
+    this.clearFn = function() {
+        for (let a = 0; a < thet.outputBoxes.length; a++) {
+            thet.outputBoxes[a].value = 0;
         }
-        for (let b = 0; b < this.classListener.length; b++) {
-            this.classListener[b].value = null;
+        for (let b = 0; b < thet.classListener.length; b++) {
+            thet.classListener[b].value = null;
         }
-    },
+    };
 };
+var calculatorFactory = {
+    createNewCalculator: function() {
+        const newCalculator = new Calculator();
+        return newCalculator;
+    }
+}
