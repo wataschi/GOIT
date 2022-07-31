@@ -9,14 +9,14 @@
 #calculator {
     background-color: #afb7bf;
     width: 1200px;
-    height: 50px;
+    height: 40px;
     margin: auto;
     margin-top: 50px;
     text-align: center;
     border: 1px black solid;
-    font-size: 42px;
-    padding-top: 25px;
-    padding-bottom: 15px;
+    font-size: 36px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #calcBox {
@@ -26,9 +26,9 @@
     width: 1200px;
     height: 300px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     border: 1px black solid;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .leftbox {
@@ -85,10 +85,12 @@ input {
 
 #clearButton {
     display: flex;
+    font-family: "Shadows Into Light", cursive;
+    font-size: medium;
     width: 150px;
     height: 35px;
-    font-size: 24px;
-    font-style: italic;
+    font-size: 22px;
+    font-style: bold;
     justify-content: center;
     text-align: center;
     justify-items: center;
@@ -166,12 +168,12 @@ input {
 
 #slideR {
     margin: auto;
-    margin-left: 1%;
+    margin-left: 5%;
 }
 
 #slideL {
     margin: auto;
-    margin-right: 1%;
+    margin-right: 5%;
 }
 
 body {
