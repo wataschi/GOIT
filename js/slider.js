@@ -1,13 +1,14 @@
-const slider1 = {
+function Slider() {
+
     //properties
-    imageURL: [],
-    prefButton: document.getElementById("slideL"),
-    nextButton: document.getElementById("slideR"),
-    currentImg: document.getElementById("currentImg"),
-    currentImgIndex: 0,
+    this.imageURL = [];
+    this.prefButton = document.getElementById("slideL");
+    this.nextButton = document.getElementById("slideR");
+    this.currentImg = document.getElementById("currentImg");
+    this.currentImgIndex = 0;
 
     // methods
-    start: function(e) {
+    this.init = function(e) {
         const that = this;
 
         this.prefButton.addEventListener("click", e => {
@@ -23,10 +24,10 @@ const slider1 = {
         this.imageURL.push("../img/4.jpg");
         this.imageURL.push("../img/5.jpg");
         this.currentImg.src = this.imageURL[this.currentImgIndex];
-    },
+    };
 
     //pref slide
-    showPrefImg: function(e) {
+    this.showPrefImg = function(e) {
         this.nextButton.disabled = false;
         this.currentImgIndex--;
         console.log(this.currentImgIndex);
@@ -37,10 +38,10 @@ const slider1 = {
             this.prefButton.disabled = true;
             this.currentImg.src = this.imageURL[this.currentImgIndex];
         }
-    },
+    };
 
     //next slide
-    showNextImg: function(e) {
+    this.showNextImg = function(e) {
         this.prefButton.disabled = false;
         this.currentImgIndex++;
         console.log(this.currentImgIndex);
@@ -51,5 +52,5 @@ const slider1 = {
             this.nextButton.disabled = true;
             this.currentImg.src = this.imageURL[this.currentImgIndex];
         }
-    },
+    };
 };

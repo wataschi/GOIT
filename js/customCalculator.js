@@ -52,9 +52,3 @@ function Calculator(inputId, outputId, clearButtonId) {
         }
     };
 };
-var calculatorFactory = {
-    createNewCalculator: function() {
-        const newCalculator = new Calculator(inputId, outputId, clearButtonId);
-        return newCalculator;
-    }
-}
