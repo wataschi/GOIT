@@ -7,8 +7,8 @@ function Calculator(inputId, outputId, clearButtonId) {
     this.outputDayValue = null;
     this.outputAccumulate = null;
     const thet = this;
-    this.init = function() {
 
+    this.init = function() {
         const clearFnBind = thet.clearFn.bind(Calculator);
         for (const item of thet.classListener) {
             item.addEventListener("input", () => {
